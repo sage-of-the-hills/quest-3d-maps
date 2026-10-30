@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quest 3D Maps</title>
+  <meta name="description" content="Tabletop 3D city maps for Meta Quest 3 in mixed reality, built with WebXR and OpenStreetMap." />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three/three.module.js",
+        "three/addons/": "./vendor/three/addons/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <header class="hud">
+    <div class="brand">
+      <h1>Quest 3D Maps</h1>
+      <p id="city-name">Loading…</p>
+    </div>
+
+    <nav id="city-buttons" class="row" aria-label="Choose a city"></nav>
+
+    <div class="row">
+      <button id="btn-height" class="secondary">Heights ×1</button>
+      <button id="btn-reset" class="secondary">Reset map</button>
+    </div>
+
+    <div class="row">
+      <button id="btn-ar" class="xr" hidden>Enter mixed reality</button>
+      <button id="btn-vr" class="xr" hidden>Enter VR</button>
+    </div>
+    <p id="xr-note" class="note" hidden>Open this page in the Meta Quest Browser to view it in mixed reality or VR.</p>
+
+    <p id="status" class="status" role="status">Starting…</p>
+  </header>
+
+  <footer class="attribution">
+    Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

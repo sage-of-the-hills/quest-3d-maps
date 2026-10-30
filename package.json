@@ -1,0 +1,14 @@
+{
+  "name": "quest-3d-maps",
+  "version": "0.1.0",
+  "description": "Tabletop 3D city maps for Meta Quest 3 (WebXR + OpenStreetMap)",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "update-three": "npm install three@latest && cp node_modules/three/build/three.module.js node_modules/three/build/three.core.js vendor/three/ && cp node_modules/three/examples/jsm/controls/OrbitControls.js vendor/three/addons/controls/"
+  },
+  "devDependencies": {
+    "three": "^0.186.1"
+  }
+}
